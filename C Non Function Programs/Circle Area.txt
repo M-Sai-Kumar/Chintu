@@ -1,0 +1,16 @@
+Q3:print area of circle
+------------------------
+		#include <stdio.h>
+		int main()
+		{
+		float radius,area;
+		radius=6;
+		area=3.14*(radius*radius);
+		printf("%f\n",area);
+		radius=10;
+		area=3.14*(radius*radius);
+		printf("%.3f\n",area);
+		radius=16;
+		area=3.14*(radius*radius);
+		printf("%.2f\n",area);
+		}

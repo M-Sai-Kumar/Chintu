@@ -1,0 +1,22 @@
+Q5:print average of 3 numbers
+-----------------------------
+		#include <stdio.h>
+		int main()
+		{
+		float num1,num2,num3,avg;
+			num1=10;
+			num2=20;
+			num3=30;
+			avg=(num1+num2+num3)/3;
+			printf("%f\n",avg);
+			num1=654;
+			num2=2476;
+			num3=6840;
+			avg=(num1+num2+num3)/3;
+			printf("%.3f\n",avg);
+			num1=749;
+			num2=8690;
+			num3=397;
+			avg=(num1+num2+num3)/3;
+			printf("%.3f\n",avg);
+		}

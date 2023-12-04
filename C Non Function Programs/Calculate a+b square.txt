@@ -1,0 +1,19 @@
+Q6:program to calculate a+b square
+----------------------------------
+		#include <stdio.h>
+		int main()
+		{
+		int a,b,result;
+			a=3;
+			b=3;
+			result=(a*a)+(b*b)+2*a*b;
+			printf("%d\n",result);
+			a=51;
+			b=31;
+			result=(a*a)+(b*b)+2*a*b;
+			printf("%d\n",result);
+			a=63;
+			b=58;
+			result=(a*a)+(b*b)+2*a*b;
+			printf("%d\n",result);
+		}
