@@ -1,0 +1,14 @@
+Q4:print cube of a number
+--------------------------
+		#include<stdio.h>
+		
+		void cube(int num){
+			int cube=num*num*num;
+			printf("%d\n",cube);
+		}
+		int main()
+		{
+		cube(2);
+		cube(11);
+		cube(23);
+		}

@@ -1,0 +1,14 @@
+Q6:program to calculate a+b square
+-----------------------------------
+		#include<stdio.h>
+		
+		void square(int a,int b){
+		int ab=(a*a)+(b*b)+2*a*b;
+			printf("%d\n",ab);
+		}
+		int main()
+		{
+		square(2,9);
+		square(3,5);
+		square(1,3);
+		}

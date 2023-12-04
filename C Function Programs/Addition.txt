@@ -1,0 +1,33 @@
+#include <stdio.h>
+		void addition(int number1,int number2)
+		{
+			int result;
+			result=number1+number2;
+			printf("%d\n",result);
+		}
+		void substraction(int number1,int number2)
+		{
+			int result;
+			result=number1-number2;
+			printf("%d\n",result);
+		}
+		void multiplication(int number1,int number2)
+		{
+			int result;
+			result=number1*number2;
+			printf("%d\n",result);
+		}
+		void division(int number1,int number2)
+		{
+			int result;
+			result=number1/number2;
+			printf("%d\n",result);
+		}
+		int main()
+		{
+			addition(20,30);
+			substraction(2000,1000);
+			multiplication(20,30);
+			division(2000,1000);
+			return 0;
+		} 

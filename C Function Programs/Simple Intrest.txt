@@ -1,0 +1,14 @@
+Q2:print simple interest
+--------------------------
+		#include<stdio.h>
+
+		  void interest(float p,float t,float r){
+			float si = (p*t*r)/100;
+			printf("%.3f\n",si);
+		  }
+		int main()
+		{
+		  interest(1000,20,30);
+		  interest(2300,11,5);
+		  interest(3300,5,12);
+		}
