@@ -1,0 +1,15 @@
+table{
+    background-color: rgba(228, 201, 89, 0.674);
+    padding: 30px; 
+}
+label{
+    color: rgb(136, 8, 8);
+}
+#b1{
+    background-color: blueviolet;
+    padding: 5px;
+}
+#b2{
+    background-color: red;
+    padding: 5px;
+}
