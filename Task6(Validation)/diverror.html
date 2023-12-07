@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            ADDITION
+        </title>
+        <link rel="stylesheet" href="add.css">
+        <script src="diverror.js"></script>
+    </head>
+    <body>
+        <form action="Servlet1" onsubmit="return addition()" onreset="return eraseData()">
+            <table align="center">
+                <caption>ADDITION APPLICATION</caption>
+                <tr>
+                    <td>
+                        <label for="id1">
+                            Enter n1 value:
+                        </label>
+                    </td>
+                    <td>
+                        <input type="number" id="id1" name="firstNumber">
+                    </td>
+                    <td>
+                        <span id="span1">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="id2">
+                            Enter n2 value:
+                        </label>
+                    </td>
+                    <td>
+                        <input type="number" id="id2" name="secondNumber">
+                    </td>
+                    <td>
+                        <span id="span2">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                       <input type="submit" value="ADD">
+                    </td>
+                    <td>
+                        <input type="reset" value="ERASE">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="div1">
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>   

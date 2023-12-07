@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Simple Intrest
+    </title>
+    <script src="intrestvalidation.js"></script>
+</head>
+
+<body>
+    <form action="servlet1" onsubmit="return fun1()" onreset="return eraseData()">
+        <table align="center">
+            <caption>simple intrest</caption>
+            <tr>
+                <td>
+                    <label for="id1"> 
+                        Enter P value:
+                    </label>
+                </td>
+                <td>
+                    <input type="number" id="id1" name="firstNumber">
+                </td>
+                <td>
+                    <span id="span1">*</span>
+                </td>
+
+            <tr>
+                <td></td>
+                <td>
+                    <div id="div1"> </div>
+                </td>
+            </tr>
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="id2">
+                        Enter T value:
+                    </label>
+                </td>
+                <td>
+                    <input type="number" id="id2" name="secondNumber">
+                </td>
+                <td>
+                    <span id="span2">*</span>
+                </td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td>
+                    <div id="div2"> </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="id3">
+                        Enter R value:
+                    </label>
+                </td>
+                <td>
+                    <input type="number" id="id3" name="thirdNumber">
+                </td>
+                <td>
+                    <span id="span3">*</span>
+                </td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td>
+                    <div id="div3"> </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="submit" value="GET">
+                </td>
+                <td>
+                    <input type="reset" value="ERASE">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="div4" ></div>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+
+</html>

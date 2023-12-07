@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Circle Area</title>
+        <script src="circleareavalidation.js"></script>
+    </head>
+    <body>
+        <form action="servlet1" onsubmit="return area()" onreset="return clearData()">
+            <table>
+                <caption>Circle Area</caption>
+                <tr>
+                    <td>
+                        <label for="num1">Enter Radius</label>
+                    </td>
+                    <td>
+                        <input type="number" name="Radius" id="num1">
+                    </td>
+                    <td>
+                        <span id="span1">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="AREA" id="b1">
+
+                    </td>
+                    <td>
+                        <input type="reset" value="ERASE" id="b2">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="div1"></div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

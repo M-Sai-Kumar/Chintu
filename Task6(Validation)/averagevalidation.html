@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AVERAGE</title> 
+        <script src="averagevalidation.js"></script>
+    </head>
+    <body>
+        <form action="" onsubmit="return avg()" onreset="return cleardata()">
+            <table align="center">
+                <caption>Average</caption>
+                <tr>
+                    <td>
+                        <label for="num1">Enter first number:</label>
+                    </td>
+                    <td>
+                        <input type="number" name="firstnumber" id="num1">
+                    </td>
+                    <td>
+                        <span id="s1">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="num2">Enter second number:</label>
+                    </td>
+                    <td>
+                        <input type="number" name="secondnumber" id="num2">
+                    </td>
+                    <td>
+                        <span id="s2">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="num3">Enter third number:</label>
+                    </td>
+                    <td>
+                        <input type="number" name="thirdnumber" id="num3">
+                    </td>
+                    <td>
+                        <span id="s3">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="AVERAGE">
+                    </td>
+                    <td>
+                        <input type="reset" value="RESET">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="div1"></div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
