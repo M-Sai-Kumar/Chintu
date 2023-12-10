@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TOTAL BY ARRAY</title>
+    <script>
+        var prices = []; 
+
+        function add() { 
+            var price = eval(document.getElementById('num').value) 
+
+            prices.push(price) 
+
+            showFruits()
+
+        }
+
+        function remove(){
+            prices.pop()
+            showFruits()
+        }
+
+        function showFruits() {
+            var str = ''
+
+            for (var i = 0; i < prices.length; i++) {
+                str = str + '<li>' + prices[i] + '</li>'
+            }
+
+            document.getElementById('numberlist').innerHTML = str;
+        }
+
+        function total() {
+            var total = 0;
+
+            for (var i = 0; i < prices.length; i++) {
+                total += prices[i];
+            }
+
+            document.getElementById('text1').innerText = 'Total: ' + total;
+        }
+
+        function discount() {
+            total()
+
+            var totalDiscount = eval(document.getElementById('text1').innerText) * 0.95;
+
+            document.getElementById('text2').innerText = 'Total with 5% Discount: ' + totalDiscount
+        }
+
+        function gst() {
+
+            var totalDiscount = eval(document.getElementById('text1').innerText) * 0.95;
+
+            var gst = totalDiscount * 1.18;
+            document.getElementById('text3').innerText = 'Total with 18% GST: ' + gst
+        }
+    </script>
+</head>
+
+<body>
+    <table>
+        <caption>
+            <h3 id="h1">WELCOME TO RS COMPANIES</h3>
+        </caption>
+        <tr>
+            <td>
+                <label for="num"> Enter item cost : </label>
+            </td>
+            <td>
+                <input type="number" name="" id="num">
+            </td>
+            <td>
+                <button id="b1" onclick="add()">ADD</button>
+                <button id="b2" onclick="remove()">REMOVE</button>
+            </td>
+        </tr>
+
+        <br> <br>
+
+        <tr>
+            <td>
+                List of item prices
+            </td>
+            <td>
+                <ul id="numberlist"></ul>
+            </td>
+        </tr>
+
+        <br><br>
+
+        <tr>
+            <td>
+                <button id="b2" onclick="total()">TOTAL</button>
+            </td>
+            <td>
+                <button id="b3" onclick="discount()">TOTAL WITH 5% DISCOUNT</button>
+            </td>
+            <td>
+                <button id="b4" onclick="gst()">TOTAL WITH 18% GST </button>
+            </td>
+        </tr>
+
+        <br><br>
+
+
+        <tr>
+            <td>
+                <p id="text1"></p>
+            </td>
+            <td>
+                <p id="text2"></p>
+            </td>
+            <td>
+                <p id="text3"></p>
+            </td>
+        </tr>
+
+    </table>
+</body>
+
+</html>
