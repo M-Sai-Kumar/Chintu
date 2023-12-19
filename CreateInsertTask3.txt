@@ -1,0 +1,97 @@
+ create table studenttab1
+ (
+	roll_number				NUMBER 	PRIMARY KEY,
+	driving_license_number	VARCHAR(20) UNIQUE
+ );
+ 
+
+	insert into studenttab1(roll_number,driving_license_number) values(001,'TS322023123456');
+	insert into studenttab1(roll_number,driving_license_number) values(002,'TS258146484648');
+	insert into studenttab1(roll_number,driving_license_number) values(003,null);
+	insert into studenttab1(roll_number,driving_license_number) values(004,'TS669871356468');
+	insert into studenttab1(roll_number,driving_license_number) values(005,null);
+
+
+commit;
+
+select *from studenttab1;
+
+==================================================================================================================
+
+create table studenttab2
+(
+	roll_number			NUMBER	PRIMARY KEY,
+	aadhar_card_number	VARCHAR(12)	NOT NULL UNIQUE    --(varchar) because value getting in exponencial--
+);
+
+	insert into studenttab2(roll_number,aadhar_card_number) values(11,757140594972);
+	insert into studenttab2(roll_number,aadhar_card_number) values(12,123654878954);
+	insert into studenttab2(roll_number,aadhar_card_number) values(13,654789258741);
+	insert into studenttab2(roll_number,aadhar_card_number) values(14,321657493512);
+	insert into studenttab2(roll_number,aadhar_card_number) values(15,798125844163);
+	
+commit;
+
+select *from studenttab2;	
+	
+	
+==================================================================================================================
+
+create table studenttab3
+(
+	roll_number		NUMBER		PRIMARY KEY,
+	age				NUMBER		NOT NULL CHECK(age>20 AND age<25),
+	country			VARCHAR(10)	DEFAULT 'INDIA',
+	created_date	DATE		DEFAULT SYSDATE,
+	modified_date	DATE		DEFAULT SYSDATE
+);
+
+	insert into studenttab3(roll_number,age) values(123,21);
+	insert into studenttab3(roll_number,age) values(213,22);
+	insert into studenttab3(roll_number,age) values(786,23);
+	insert into studenttab3(roll_number,age) values(826,24);
+	insert into studenttab3(roll_number,age) values(963,22);
+
+
+commit;
+
+select *from studenttab3;
+
+==================================================================================================================
+
+create table studenttab4
+(
+	roll_number		NUMBER		PRIMARY KEY,
+	name			VARCHAR(20) 	NOT NULL
+);
+
+	insert into studenttab4 values(101,'sai');
+	insert into studenttab4 values(102,'rakesh');
+	insert into studenttab4 values(103,'padma');
+	insert into studenttab4 values(104,'kala');
+	insert into studenttab4 values(105,'chandu');
+	
+commit;
+
+select * from studenttab4;
+	
+	
+	
+create table sscresults
+(
+	hall_ticket_number	NUMBER(10)	PRIMARY KEY,
+	sid					NUMBER 		REFERENCES studenttab4(roll_number),
+	total_marks			NUMBER		NOT NULL CHECK(total_marks>200 AND total_marks<600)
+);
+
+	insert into sscresults values(1631123524,101,420);
+	insert into sscresults values(1631123525,102,545);
+	insert into sscresults values(1631123526,103,389);
+	insert into sscresults values(1631123527,104,324);
+	insert into sscresults values(1631123528,105,441);
+	
+	
+commit;
+
+select *from sscresults;
+
