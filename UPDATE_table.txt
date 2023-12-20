@@ -1,0 +1,146 @@
+Table Name :Employee
+===================== 
+
+create table employee
+(
+ID number primary key,
+Name varchar(15) not null,
+Age number check(Age<40 AND Age>20),
+Address varchar(15) not null,
+Salary float check(Salary<=100000 AND salary>=15000)
+);
+
+
+insert into employee(ID,Name,Age,Address,Salary) values (1,'Ramesh',32,'Ahemadabad',20000.00);
+insert into employee(ID,Name,Age,Address,Salary) values (2,'Khilan',25,'Hyd',30000.00);
+insert into employee(ID,Name,Age,Address,Salary) values (3,'kaushik',23,'Ahemadabad',60000.00);
+insert into employee(ID,Name,Age,Address,Salary) values (4,'chaitali',25,'Wgl',80000.00);
+insert into employee(ID,Name,Age,Address,Salary) values (5,'Hardik',27,'Pune',90000.00);
+insert into employee(ID,Name,Age,Address,Salary) values (6,'Komal',22,'Pune',20000.00);
+insert into employee(ID,Name,Age,Address,Salary) values (7,'Muffy',24,'Ahemadabad',100000.00);
+
+commit;
+
+select * from employee;
+
+R1: Modify all employees address to Chennai
+--- 
+ANSWER:		update employee set address='chennai';
+
+
+R2:Komal wants to update his address to Delhi
+--- 
+ANSWER:		update employee set address='Delhi' where id=6;
+
+R3:Muffy wants to update his age to 23, name to Muffi and address to Hyd
+--- 
+ANSWER:		update employee set name='Muffi',age=23,address='Hyd' where id=7;
+
+R4:Give bonus of 2500 to all employees
+--- 
+ANSWER:		update employee set salary=salary+2500;
+
+R5:Give bonus of 2500 to all employees whose salary is below 50000
+--- 
+ANSWER:		update employee set salary=salary+2500 where salary<50000;
+ 
+ 
+=====================================================================================================
+
+Table Name :Employees
+======================
+Columns 	:name,age,salary,dept,city,userid,pswd,mailid
+
+
+	CREATE TABLE employees
+	  (
+		 NAME   VARCHAR(10) NOT NULL,
+		 age    NUMBER NOT NULL CHECK(age>0 AND age<100),
+		 salary NUMBER NOT NULL CHECK(salary>0),
+		 dept   VARCHAR(10) NOT NULL,
+		 city   VARCHAR(10) NOT NULL,
+		 userid VARCHAR(10) PRIMARY KEY,
+		 pswd   VARCHAR(10) NOT NULL,
+		 mailid VARCHAR(15) NOT NULL UNIQUE
+  );  
+
+insert into employees values('L Ajay',31,24000,'cse','hyd','ajay','ap11','ajay@gmail.com');
+insert into employees values('K Depak',33,56000,'eee','pune','depak','dp222','depak@gmail.com');
+insert into employees values('H Venu',28,44000,'cse','hyd','venu','vn55','venu1@gmail.com');
+insert into employees values('D Sanjay',36,50000,'ece','chennai','sanju','uh1190','sanjay@gmail.com');
+insert into employees values('T Vijay',41,78000,'eee','pune','vijay','vj7711','vijay@gmail.com');
+
+commit;
+
+select * from employees;
+
+
+Tasks on employees table:
+=========================
+Req1: modify sanju city to warangal
+-----
+ANSWER:		update employees set city='Warangal' where age=33;
+
+Req2: modify depak city to karimnagar,age to 31,salary to 44000 and name T SaiDepak
+-----
+ANSWER:		update employees set city='Karimnagar',age=31,salary=44000,name='T SaiDepak' where name='K Depak';
+
+Req3: modify all employees cities to mumbai
+-----
+ANSWER:		update employees set city='Mumbai';
+
+Req4: vijay wants change his password to apple
+-----
+ANSWER:		update employees set pswd='apple' where userid='vijay';
+
+Req5: venu wants to change his dept to it and city to delhi
+-----
+ANSWER:		update employees set dept='it' where userid='venu';
+ 
+Req6: Give bonus of 2000 to all employees whose salary is below 45000
+-----
+ANSWER:		update employees set salary=salary+2000 where salary<45000;
+
+
+=====================================================================================================
+
+Table Name :accounts
+==================== 
+
+ CREATE TABLE accounts
+  (
+     accno   NUMBER PRIMARY KEY,
+     NAME    VARCHAR(10) NOT NULL,
+     amount  FLOAT NOT NULL
+  ); 
+
+  insert into accounts(accno,name,amount) values (4501,'Harish',45000);
+  insert into accounts(accno,name,amount) values (4502,'Depak',55000);
+  insert into accounts(accno,name,amount) values (4503,'Ram',65000);
+  
+  commit;
+  
+  select * from accounts;
+
+
+Tasks on accounts table:
+========================
+Req7: Depak wants to deposit 20000 into his account
+-----
+ANSWER:		update accounts set amount=amount+20000 where accno=4502;
+
+Req8: Ram wants to withdraw 5000 from his account
+-----
+ANSWER:		update accounts set amount=amount-5000 where accno=4503;
+
+Req9: Harish wants to transfer 30000 to Depak 
+-----
+ANSWER:		update accounts set amount=amount-30000 where accno=4502;
+			update accounts set amount=amount+30000 where accno=4501;
+			
+			
+Withdraw Query1:	
+			update accounts set balance=balance-<withdrawal-amount> where a/c=<account_number>;
+
+Deposit Query2:		
+			update accounts set balance=balance+<deposit-amount> where a/c=<account_number>;
