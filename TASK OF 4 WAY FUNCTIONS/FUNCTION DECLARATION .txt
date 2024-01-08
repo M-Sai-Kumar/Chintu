@@ -1,0 +1,55 @@
+FUNCTION DECLARATION 
+====================
+
+SIMPLE INTREST:-
+--------------
+ 
+function intrest(p,t,r){
+return (p*t*r/100);
+}
+let si = intrest(32000,12,5)
+console.log(si)
+
+AREA OF CIRCLE:-
+---------------
+function circle(r){
+  return 3.14*r*r;
+}
+let area = circle(9)
+console.log(area)
+
+CUBE OF NUMBER:-
+--------------
+
+ function cube(num){
+ return num*num*num
+ }
+ let x = cube(2)
+ console.log(x)
+
+AVERAGE OF 3 NUMBERS:-
+--------------------
+
+function average (n1,n2,n3){
+  return  (n1+n2+n3)/3;
+}
+let avg = average (21,65,35)
+console.log (avg.toFixed(3))
+
+
+BIG OF 2 NUMBERS:-
+-----------------
+
+function bigOfNumbers(num1,num2){
+  return num1>num2 ? num1 : num2 
+}
+let big = bigofnumbers(35,65)
+console.log (big)
+
+
+
+
+
+
+
+
